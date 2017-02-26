@@ -1,0 +1,41 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.matrix {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.matrix th, .matrix td {
+  padding: 5px 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  width: 20%;
+}
+.matrix td img {
+  /* force image size */
+  width: 300px;
+  height: 300px;
+}
+.matrix td > span { /* card text */
+  display: inline-block;
+  height: 70px;
+}
+.matrix .person { color: Crimson; }
+.matrix .action { color: SeaGreen; }
+.matrix .object { color: DarkBlue; }
+
+small {
+  font-family: 'Roboto', sans-serif;
+  font-size: 75%;
+  color: silver;
+}
+
+.controls {
+  padding: 20px;
+  margin: 40px 0;
+  text-align: center;
+}
+.controls label {
+  margin-left: 20px;
+  margin-right: 20px;
+}

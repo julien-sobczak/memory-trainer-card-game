@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Memory Trainer (Card Game)</title>
+
+    <!-- Stylesheets -->
+    <link href="/stylesheets/normalize.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div id="reference">
+
+      <div class="controls">
+        <input type="checkbox"
+               name="showPictures"
+               v-model="showPictures"
+               v-bind:true-value="true"
+               v-bind:false-value="false" /> <label for="showPictures">Show pictures?</label>
+        <input type="checkbox"
+               name="showTexts"
+               v-model="showTexts"
+               v-bind:true-value="true"
+               v-bind:false-value="false" /> <label for="showText">Show texts?</label>
+      </div>
+
+      <!-- Matrix table -->
+      <table class="matrix" id="matrix">
+        <thead>
+          <tr>
+            <td></td>
+            <th v-for="suit in matrix.metadata.suits">
+              {{ suit.name }}<br/>
+              <small class="explanation">{{ suit.description }}</small>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="type in matrix.metadata.types">
+            <th>
+              {{ type.name }}<br/>
+              <small class="explanation">{{ type.description }}</small>
+            </th>
+            <td v-for="suit in matrix.metadata.suits">
+              <img v-if="showPictures" :src="getSmallPicture(suit, type)" />
+              <span v-if="showTexts" v-html="getPhrase(suit, type)"></span>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <th v-for="suit in matrix.metadata.suits">
+              {{ suit.name }}<br/>
+              <small class="explanation">{{ suit.description }}</small>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="/mymatrix.js"></script>
+    <script src="/scripts/application.js"></script>
+
+  </body>
+</html>
