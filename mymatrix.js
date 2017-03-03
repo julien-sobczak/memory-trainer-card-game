@@ -19,7 +19,7 @@ var matrix = {
     "types": [
       { "name": "King",  filename: "king",   description: "Male half of celeb couple"    },
       { "name": "Queen", filename: "queen",  description: "Female half of celeb couple"  },
-      { "name": "Jack",  filename: "jack",   description: "Female half of celeb couple"  },
+      { "name": "Jack",  filename: "jack",   description: "Famous Jacks"                 },
       { "name": "10",    filename: "ten",    description: "Disney's characters"          },
       { "name": "9",     filename: "nine",   description: "Legend characters or Symbols" },
       { "name": "8",     filename: "eight",  description: "Simpson Family"               },
@@ -113,9 +113,9 @@ var matrix = {
      */
 
     // 5 - Professions
-    { "suit": "Diamond", "type": "5", "person": "Stripteaser", "action": "Doing lapdance",      "object": "Row",       "phrase": "{P} {A} around a {O}" }, // TODO check syntax
+    { "suit": "Diamond", "type": "5", "person": "Stripteaser", "action": "Doing lapdance",      "object": "Row",       "phrase": "{P} {A} around a {O}" }, 
     { "suit": "Heart",   "type": "5", "person": "Fireman",     "action": "Squirting water",     "object": "Hose",      "phrase": "{P} {A} from a {O}" },
-    { "suit": "Club",    "type": "5", "person": "Policeman",   "action": "attaching a burgler", "object": "handcuffs", "phrase": "{P} {A} with {O}" }, // TODO check syntax
+    { "suit": "Club",    "type": "5", "person": "Policeman",   "action": "attaching a burgler", "object": "handcuffs", "phrase": "{P} {A} with {O}" }, 
     { "suit": "Spade",   "type": "5", "person": "Clown",       "action": "Juggle",              "object": "Rings",     "phrase": "{P} {A} with his {O}" },
     /*
      * Also:
