@@ -50,7 +50,7 @@ var matrix = {
     // Jack - Female half of celeb couple
     { "suit": "Diamond", "type": "Jack", "person": "Mickael Jackson", "action": "Moonwalking",       "object": "White Glove",   "phrase": "{P} {A} with a {O}" },
     { "suit": "Heart",   "type": "Jack", "person": "Jack Bauer",      "action": "Interrogating",     "object": "Robot Nao",     "phrase": "{P} {A} a {O}" },
-    { "suit": "Club",    "type": "Jack", "person": "Batman's Joker",  "action": "Laughing insanely", "object": "Play Card",     "phrase": "{P} {A} a {O}" },
+    { "suit": "Club",    "type": "Jack", "person": "Batman's Joker",  "action": "Laughing insanely", "object": "Play Card",     "phrase": "{P} {A} holding a {O}" },
     { "suit": "Spade",   "type": "Jack", "person": "Jack Sparrow",    "action": "Drinking",          "object": "Bottle of rum", "phrase": "{P} {A} a {O}" },
     /*
      * Also:
@@ -71,7 +71,7 @@ var matrix = {
     // 9 - Legend characters or Symbols
     { "suit": "Diamond", "type": "9", "person": "The Dalai Lama", "action": "Meditating and sitting",      "object": "Boulder",          "phrase": "{P} {A} on a {O}" },
     { "suit": "Heart",   "type": "9", "person": "Santa Claus",    "action": "Taking christmas presents",   "object": "Large Brown Sack", "phrase": "{P} {A} out of {O}" },
-    { "suit": "Club",    "type": "9", "person": "Death",          "action": "Sharpening",                  "object": "Scythe",           "phrase": "{P} {A} a {O}" },
+    { "suit": "Club",    "type": "9", "person": "Death",          "action": "Sharpening",                  "object": "Scythe",           "phrase": "{P} {A} with a {O}" },
     { "suit": "Spade",   "type": "9", "person": "Robin Hood",     "action": "Firing arrows",               "object": "English Longbow",  "phrase": "{P} {A} out of an {O}" },
     /*
      * Also:
@@ -103,7 +103,7 @@ var matrix = {
     // 6 - Animation Characters
     { "suit": "Diamond", "type": "6", "person": "Bugs Bunny",  "action": "Saying \"What's up, doc?\"",  "object": "Carrot",                "phrase": "{P} {A} while eating a {O}" },
     { "suit": "Heart",   "type": "6", "person": "SpongeBob",   "action": "Blowing a bubble",            "object": "Net",                   "phrase": "{P} {A} holding a {O}" },
-    { "suit": "Club",    "type": "6", "person": "Titeuf",      "action": "Urinating",                   "object": "Big Yellow Hair Wick",  "phrase": "{P} {A} - {O}" },
+    { "suit": "Club",    "type": "6", "person": "Titeuf",      "action": "Urinating",                   "object": "Big Yellow Hair Wick",  "phrase": "{P} {A} hairing a {O}" },
     { "suit": "Spade",   "type": "6", "person": "Scooby Doo",  "action": "Swallowing",                  "object": "Giant Sandwich",        "phrase": "{P} {A} a {O}" },
     /*
      * Also:
@@ -116,7 +116,7 @@ var matrix = {
     { "suit": "Diamond", "type": "5", "person": "Stripteaser", "action": "Doing lapdance",      "object": "Row",       "phrase": "{P} {A} around a {O}" }, // TODO check syntax
     { "suit": "Heart",   "type": "5", "person": "Fireman",     "action": "Squirting water",     "object": "Hose",      "phrase": "{P} {A} from a {O}" },
     { "suit": "Club",    "type": "5", "person": "Policeman",   "action": "attaching a burgler", "object": "handcuffs", "phrase": "{P} {A} with {O}" }, // TODO check syntax
-    { "suit": "Spade",   "type": "5", "person": "Clown",       "action": "Juggle",              "object": "Rings",     "phrase": "{P} {A}  with his {O}" },
+    { "suit": "Spade",   "type": "5", "person": "Clown",       "action": "Juggle",              "object": "Rings",     "phrase": "{P} {A} with his {O}" },
     /*
      * Also:
      * - Maid clean duster
@@ -139,7 +139,7 @@ var matrix = {
      */
 
     // 3 - Sportmen
-    { "suit": "Diamond", "type": "3", "person": "Mickael Jordan",         "action": "Doing a slam dunk",        "object": "Basketball",             "phrase": "{P} {A} with a {O}" },
+    { "suit": "Diamond", "type": "3", "person": "Michael Jordan",         "action": "Doing a slam dunk",        "object": "Basketball",             "phrase": "{P} {A} with a {O}" },
     { "suit": "Heart",   "type": "3", "person": "Arnold Schwarzenegger",  "action": "Weightlifting",            "object": "Pair of dumbells",       "phrase": "{P} {A} a {O}" },
     { "suit": "Club",    "type": "3", "person": "Sébastien Loeb",         "action": "Putting a driver helmet",  "object": "Steering wheel",         "phrase": "{P} {A} holding a {O}" },
     { "suit": "Spade",   "type": "3", "person": "Usain Bolt",             "action": "Running",                  "object": "Collar of gold medals",  "phrase": "{P} {A} with a {O}" },
@@ -152,9 +152,9 @@ var matrix = {
 
     // 2 - Controversial people
     { "suit": "Diamond", "type": "2", "person": "Paris Hilton",     "action": "Taking the pose for the photograph", "object": "Chihuahua",                   "phrase": "{P} {A} with her {O}" },
-    { "suit": "Heart",   "type": "2", "person": "Colonel Sanders",  "action": "Coating",                            "object": "Breadcrumbs Chicken Pieces",  "phrase": "{P} {A} in {O}" }, // TODO check good candidate
-    { "suit": "Club",    "type": "2", "person": "Adolf H.",         "action": "hailing",                            "object": "The world",                   "phrase": "{P} {A} while kicking {O} with his ass" },
-    { "suit": "Spade",   "type": "2", "person": "Lady Gaga",        "action": "Wearing a chess dress",              "object": "A tons of luxury bags",       "phrase": "{P} {A} with her {O}" }, // TODO check syntax
+    { "suit": "Heart",   "type": "2", "person": "Colonel Sanders",  "action": "Coating",                            "object": "Breadcrumbs Chicken Pieces",  "phrase": "{P} {A} in {O}" }, 
+    { "suit": "Club",    "type": "2", "person": "Adolf H.",         "action": "hailing",                            "object": "The world",                   "phrase": "{P} {A} while kicking {O}" },
+    { "suit": "Spade",   "type": "2", "person": "Lady Gaga",        "action": "Wearing a chess dress",              "object": "A tons of luxury bags",       "phrase": "{P} {A} with her {O}" }, 
     /*
      * Also:
      * - Van Damme karate-kicking a punchbag
@@ -164,7 +164,7 @@ var matrix = {
     // Ace - Genius
     { "suit": "Diamond", "type": "Ace", "person": "Bill Gates",       "action": "Destroying",  "object": "PC displaying a blue screen",  "phrase": "{P} {A} a {O}" },
     { "suit": "Heart",   "type": "Ace", "person": "Steve Jobs",       "action": "Talking",     "object": "iPhone",                       "phrase": "{P} {A} on an {O}" },
-    { "suit": "Club",    "type": "Ace", "person": "Linus Thordval",   "action": "Chasing",     "object": "Penguin",                      "phrase": "{P} {A} a {O}" },
+    { "suit": "Club",    "type": "Ace", "person": "Linus Thornval",   "action": "Chasing",     "object": "Penguin",                      "phrase": "{P} {A} a {O}" },
     { "suit": "Spade",   "type": "Ace", "person": "Albert Einstein",  "action": "Writing",     "object": "Blackboard",                   "phrase": "{P} {A} on a {O}" },
     /*
      * Also:
