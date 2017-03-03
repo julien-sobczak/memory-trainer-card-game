@@ -15,56 +15,113 @@
   </head>
   <body>
 
-    <div id="reference">
+    <div id="app">
 
-      <div class="controls">
-        <input type="checkbox"
-               name="showPictures"
-               v-model="showPictures"
-               v-bind:true-value="true"
-               v-bind:false-value="false" /> <label for="showPictures">Show pictures?</label>
-        <input type="checkbox"
-               name="showTexts"
-               v-model="showTexts"
-               v-bind:true-value="true"
-               v-bind:false-value="false" /> <label for="showText">Show texts?</label>
-      </div>
+      <nav id="menu">
+        <ul>
+          <li>
+            <a href="#" @click="toggle('home')">Home</a>
+          </li>
+          <li>
+            <a href="#" @click="toggle('reference')">Matrix</a>
+          </li>
+          <li>
+            <a href="#" @click="toggle('practice')">Practice</a>
+          </li>
+        </ul>
+      </nav>
 
-      <!-- Matrix table -->
-      <table class="matrix" id="matrix">
-        <thead>
-          <tr>
-            <td></td>
-            <th v-for="suit in matrix.metadata.suits">
-              {{ suit.name }}<br/>
-              <small class="explanation">{{ suit.description }}</small>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="type in matrix.metadata.types">
-            <th>
-              {{ type.name }}<br/>
-              <small class="explanation">{{ type.description }}</small>
-            </th>
-            <td v-for="suit in matrix.metadata.suits">
-              <img v-if="showPictures" :src="getSmallPicture(suit, type)" />
-              <span v-if="showTexts" v-html="getPhrase(suit, type)"></span>
-            </td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td></td>
-            <th v-for="suit in matrix.metadata.suits">
-              {{ suit.name }}<br/>
-              <small class="explanation">{{ suit.description }}</small>
-            </th>
-          </tr>
-        </tfoot>
-      </table>
+      <section v-if="section == 'home'" id="home">
+        <h1>Welcome to Memory Trainer,</h1>
+        <h2>Your trainer to help you remember the order of a deck of cards</h2>
+        <h3><span class="label">Memory Palace</span><span class="label">PAO System</span></h3>
+      </section>
+
+      <section v-if="section == 'reference'" id="reference">
+        <h1>Matrix</h1>
+
+        <div class="controls">
+          <input type="checkbox"
+                 name="showPictures"
+                 v-model="showPictures"
+                 v-bind:true-value="true"
+                 v-bind:false-value="false" /> <label for="showPictures">Show pictures?</label>
+          <input type="checkbox"
+                 name="showTexts"
+                 v-model="showTexts"
+                 v-bind:true-value="true"
+                 v-bind:false-value="false" /> <label for="showText">Show texts?</label>
+        </div>
+
+        <!-- Matrix table -->
+        <table class="matrix" id="matrix">
+          <thead>
+            <tr>
+              <td></td>
+              <th v-for="suit in matrix.metadata.suits">
+                {{ suit.name }}<br/>
+                <small class="explanation">{{ suit.description }}</small>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="type in matrix.metadata.types">
+              <th>
+                {{ type.name }}<br/>
+                <small class="explanation">{{ type.description }}</small>
+              </th>
+              <td v-for="suit in matrix.metadata.suits">
+                <img v-if="showPictures" :src="getSmallPicture(suit, type)" />
+                <span v-if="showTexts" v-html="getPhrase(suit, type)"></span>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <th v-for="suit in matrix.metadata.suits">
+                {{ suit.name }}<br/>
+                <small class="explanation">{{ suit.description }}</small>
+              </th>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section v-if="section == 'practice'" id="practice">
+        <h1>Training Area</h1>
+
+        <div class="controls">
+          <a href="#" @click="initPracticeSession()">Next</a>
+        </div>
+
+        <div class="cardAndPicture">
+          <div :class="getClassName(card1)">
+            Card {{ card1.suit }} {{ card1.type }}
+          </div>
+          <img :src="getSmallPicture(getSuit(card1.suit), getType(card1.type))" />
+          <span class="person">{{ card1.person }}</span>
+        </div>
+
+        <div class="cardAndPicture">
+          <div :class="getClassName(card2)">
+            Card {{ card2.suit }} {{ card2.type }}
+          </div>
+          <img :src="getSmallPicture(getSuit(card2.suit), getType(card2.type))" />
+          <span class="action">{{ card2.action }}</span>
+        </div>
+
+        <div class="cardAndPicture">
+          <div :class="getClassName(card3)">
+            Card {{ card3.suit }} {{ card3.type }}
+          </div>
+          <img :src="getSmallPicture(getSuit(card3.suit), getType(card3.type))" />
+          <span class="object">{{ card3.object }}</span>
+        </div>
+
+      </section>
+
     </div>
-
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="/mymatrix.js"></script>
